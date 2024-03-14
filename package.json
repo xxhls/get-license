@@ -18,7 +18,10 @@
     "dev:module": "pnpm run build && node dist/index.module.js",
     "clear": "node bin/clearDist.js",
     "local-check": "wkstd local-check",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
   "author": "",
@@ -38,6 +41,7 @@
     "prettier-config-wk": "^0.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.1.6",
+    "vitepress": "1.0.0-rc.45",
     "wkstd": "^0.2.4"
   },
   "dependencies": {
