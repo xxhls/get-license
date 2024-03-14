@@ -1,6 +1,6 @@
 {
   "name": "@xxhls/get-license",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -9,6 +9,12 @@
   "bin": {
     "get-license": "dist/index.js"
   },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  ],
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,11 +1,12 @@
 import fs from 'fs-extra';
 import getConfig from './utils/getConfig';
-import { info, debug, warn, error } from './log';
-import licenseMap, { License } from './templates';
-
+import getGenerator, { licenses } from './templates';
 import { Command } from 'commander';
 import { name, version, description } from '../package.json';
 
+/**
+ * 主函数
+ */
 const main = async () => {
   const program = new Command();
 
@@ -22,26 +23,35 @@ const main = async () => {
     .name(name)
     .description(description)
     .version(version)
-    .requiredOption('--license <license>', '选择 License 类型, 可选值: mit')
+    .requiredOption(`--license <license>', '选择 License 类型, 可选值: ${licenses.join(' | ')}`)
     .parse(process.argv);
 
+  /**
+   * 获取 license
+   */
   const options = program.opts();
   const { license } = options;
 
-  if (!license) {
-    error('未选择 License 类型');
-    process.exit(1);
-  } else if (license === 'mit' || license === 'MIT') {
-    info('成功选择 MIT License');
-    const generator = licenseMap[License.MIT];
-    const config = await getConfig();
-    const licenseStr = generator(config.name, config.email);
-    const licensePath = `${process.cwd()}/LICENSE`;
-    fs.outputFileSync(licensePath, licenseStr);
-  } else {
-    error('未知的 License 类型');
-    process.exit(1);
-  }
+  /**
+   * 获取生成器
+   */
+  const generator = getGenerator(license);
+
+  /**
+   * 获取用户配置
+   */
+  const config = await getConfig();
+
+  /**
+   * 生成字符串
+   */
+  const licenseStr = generator(config.name, config.email);
+
+  /**
+   * 生成 LICENSE 文件
+   */
+  const licensePath = `${process.cwd()}/LICENSE`;
+  fs.outputFileSync(licensePath, licenseStr);
 };
 
 main();
