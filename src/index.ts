@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
+
 import fs from "fs-extra";
 import getConfig from "./utils/getConfig";
 import { info, debug, warn, error } from "./log";
@@ -13,6 +14,9 @@ const main = async () => {
         if (val === "mit" || val === "MIT") {
             info("成功选择 MIT License");
             license = License.MIT;
+        } else {
+            error("未知的 License 类型");
+            process.exit(1);
         }
     }
 
