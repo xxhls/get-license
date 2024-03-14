@@ -16,7 +16,9 @@
     "build": "pnpm run clear && parcel build && node bin/addComment.js",
     "dev:main": "pnpm run build && node dist/index.js --license=mit",
     "dev:module": "pnpm run build && node dist/index.module.js",
-    "clear": "node bin/clearDist.js"
+    "clear": "node bin/clearDist.js",
+    "local-check": "wkstd local-check",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -28,9 +30,15 @@
     "@types/fs-extra": "^11.0.4",
     "@types/ini": "^4.1.0",
     "@types/node": "^20.11.27",
+    "eslint": "8.0.0",
+    "eslint-config-wkts": "^0.2.4",
+    "husky": "^9.0.11",
     "parcel": "^2.12.0",
+    "prettier": "^3.2.5",
+    "prettier-config-wk": "^0.2.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.1.6",
+    "wkstd": "^0.2.4"
   },
   "dependencies": {
     "chalk": "^5.3.0",
@@ -41,5 +49,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "prettier": "prettier-config-wk"
 }
