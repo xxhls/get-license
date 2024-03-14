@@ -1,6 +1,6 @@
 {
   "name": "@xxhls/get-license",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -13,9 +13,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "parcel watch",
-    "build": "parcel build && node bin/addComment.js",
-    "dev:main": "pnpm run build && node dist/index.js --license=MIT",
-    "dev:module": "pnpm run build && node dist/index.module.js"
+    "build": "pnpm run clear && parcel build && node bin/addComment.js",
+    "dev:main": "pnpm run build && node dist/index.js --license=mit",
+    "dev:module": "pnpm run build && node dist/index.module.js",
+    "clear": "node bin/clearDist.js"
   },
   "keywords": [],
   "author": "",
