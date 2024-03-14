@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import fs from "fs-extra";
 import getConfig from "./utils/getConfig";
 import { info, debug, warn, error } from "./log";
