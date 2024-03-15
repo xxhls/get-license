@@ -3,6 +3,7 @@ import apache2 from './Apache-License-2.0';
 import gpl3 from './GNU-General-Public-License-v3.0';
 import bsd2 from './BSD-2-Clause-License';
 import bsd3 from './BSD-3-Clause-License';
+import bsl1 from './Boost-Software-License-Version-1.0';
 import { error, info, warn } from '../log';
 
 // 生成器类型
@@ -15,6 +16,7 @@ const licenseGeneratorMap: Map<string, Generator> = new Map([
   ['gpl3', gpl3],
   ['bsd2', bsd2],
   ['bsd3', bsd3],
+  ['bsl1', bsl1],
 ]);
 const licenses = Array.from(licenseGeneratorMap.keys());
 
