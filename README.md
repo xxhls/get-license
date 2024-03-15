@@ -20,6 +20,15 @@ npm install @xxhls/get-license -g
 get-license --license=mit
 ```
 
+## List
+
+- `--license=mit`: MIT LICENSE
+- `--license=apache2`: Apache License 2.0
+- `--license=gpl3`: GNU General Public License v3.0
+- `--license=bsd2`: BSD 2-Clause License
+- `--license=bsd3`: BSD 3-Clause License
+- `--license=bsl1`: Boost Software License - Version 1.0
+
 ## Changelog
 
 - v1.5.0 support Boost Software License - Version 1.0
