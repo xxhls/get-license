@@ -1,6 +1,6 @@
 {
   "name": "@xxhls/get-license",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "A tool to help you generate license files for your project",
   "keywords": [
     "license",

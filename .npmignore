@@ -13,5 +13,7 @@ src
 .npmignore
 .prettierignore
 .standard.jsonc
+CHANGELOG.md
 pnpm-lock.yaml
+README-zh.md
 tsconfig.json
