@@ -1,32 +1,34 @@
 # GET-LICENSE
 
-## 简介
+[en](./README.md) | [简体中文](./README-zh.md)
 
-一款用于自动生成 LICENSE 协议的工具
+## Introduction
 
-## 指南
+A tool to help you generate license files for your project
 
-### 安装
+## Guide
+
+### Setup
 
 ```shell
 npm install @xxhls/get-license -g
 ```
 
-### 使用
+### Useage
 
 ```shell
 get-license --license=mit
 ```
 
-## 更新日志
+## Changelog
 
-- v1.5.0 支持 Boost Software License - Version 1.0
-- v1.4.0 支持 BSD 3-Clause License
-- v1.3.0 支持 BSD 2-Clause License
-- v1.2.0 支持 GNU General Public License v3.0
-- v1.1.0 支持 Apache License 2.0
-- v1.0.0 支持 MIT LICENSE
+- v1.5.0 support Boost Software License - Version 1.0
+- v1.4.0 support BSD 3-Clause License
+- v1.3.0 support BSD 2-Clause License
+- v1.2.0 support GNU General Public License v3.0
+- v1.1.0 support Apache License 2.0
+- v1.0.0 support MIT LICENSE
 
-## 开源协议
+## License
 
 [MIT LICENSE](https://mit-license.org/)

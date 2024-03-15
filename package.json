@@ -1,7 +1,21 @@
 {
   "name": "@xxhls/get-license",
-  "version": "1.5.0",
-  "description": "",
+  "version": "1.5.1",
+  "description": "A tool to help you generate license files for your project",
+  "keywords": [
+    "license",
+    "auto-generate",
+    "cli",
+    "nodejs",
+    "typescript",
+    "parcel"
+  ],
+  "homepage": "https://xxhls.github.io/get-license/",
+  "bugs": {
+    "url": "https://github.com/xxhls/get-license/issues",
+    "email": "heyq020814@qq.com"
+  },
+  "license": "MIT",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,12 +23,10 @@
   "bin": {
     "get-license": "dist/index.js"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://opensource.org/licenses/MIT"
-    }
-  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxhls/get-license.git"
+  },
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,9 +44,7 @@
     "push": "git push origin master",
     "update:changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "xxhls <heyq020814@qq.com>",
   "devDependencies": {
     "@parcel/packager-ts": "2.12.0",
     "@parcel/transformer-typescript-types": "2.12.0",
