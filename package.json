@@ -1,6 +1,6 @@
 {
   "name": "@xxhls/get-license",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "A tool to help you generate license files for your project",
   "keywords": [
     "license",
@@ -42,7 +42,6 @@
     "docs:preview": "vitepress preview docs",
     "commit": "pnpm run build && cz",
     "push": "git push origin master",
-    "publish": "npm publish",
     "update:changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "author": "xxhls <heyq020814@qq.com>",
