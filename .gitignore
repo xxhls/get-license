@@ -1,3 +1,4 @@
 .parcel-cache
 dist
+docs/.vitepress/cache
 node_modules
