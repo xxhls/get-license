@@ -2,6 +2,7 @@ import mit from './MIT-License';
 import apache2 from './Apache-License-2.0';
 import gpl3 from './GNU-General-Public-License-v3.0';
 import bsd2 from './BSD-2-Clause-License';
+import bsd3 from './BSD-3-Clause-License';
 import { error, info, warn } from '../log';
 
 // 生成器类型
@@ -13,10 +14,10 @@ const licenseGeneratorMap: Map<string, Generator> = new Map([
   ['apache2', apache2],
   ['gpl3', gpl3],
   ['bsd2', bsd2],
+  ['bsd3', bsd3],
 ]);
 const licenses = Array.from(licenseGeneratorMap.keys());
 
-// 若要新增 License，3/3 需要在这里添加判断条件
 const getGenerator = (license: null | string) => {
   let generator: Generator | null = null;
   if (!license) {
