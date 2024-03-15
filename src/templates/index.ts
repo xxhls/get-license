@@ -46,6 +46,7 @@ const licenseNameMap: Map<string, string> = new Map([
   ['un', 'The Unlicense'],
 ]);
 const licenses = Array.from(licenseGeneratorMap.keys());
+const licensesNeedConfig = ['mit', 'bsd2', 'bsd3'];
 
 const getGenerator = (license: null | string) => {
   let generator: Generator | null = null;
@@ -68,5 +69,5 @@ const getGenerator = (license: null | string) => {
   return generator;
 };
 
-export { licenses };
+export { licenses, licensesNeedConfig };
 export default getGenerator;

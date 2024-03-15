@@ -5,13 +5,14 @@ import fs from 'fs-extra';
 import question from './question';
 import { info, warn } from '../log';
 import isGitconfigExists from './isGitconfigExists';
+import { licensesNeedConfig } from '../templates';
 
 interface IConfig {
   name: string;
   email: string;
 }
 
-const getConfig = async () => {
+const getConfig = async (license: string) => {
   const config: IConfig = {
     name: 'username',
     email: 'xxx@email.com',
@@ -31,6 +32,11 @@ const getConfig = async () => {
     info(`Username: ${config.name}`);
     info(`Email: ${config.email}`);
   } else {
+    if (!licensesNeedConfig.includes(license)) {
+      info('No Need Config');
+      return config;
+    }
+
     warn('Can not Check .gitconfig');
     // Create Config
     const name = await question('Please Enter the Username: ');

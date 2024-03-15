@@ -19,7 +19,7 @@ const main = async () => {
 
   const generator = getGenerator(license);
 
-  const config = await getConfig();
+  const config = await getConfig(license);
 
   const licenseStr = generator(config.name, config.email);
 
