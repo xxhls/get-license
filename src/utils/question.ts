@@ -1,7 +1,6 @@
 import readline from 'readline';
 
 /**
- * 命令行交互
  * @param query
  * @returns
  */

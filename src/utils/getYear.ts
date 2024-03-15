@@ -1,5 +1,4 @@
 /**
- * 获取当前年份
  * @returns {string} year
  */
 const getYear = () => {

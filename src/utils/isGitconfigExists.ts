@@ -3,7 +3,6 @@ import path from 'path';
 import fs from 'fs-extra';
 
 /**
- * 判断全局配置是否存在
  * @returns {boolean}
  */
 const isGitconfigExists = () => {

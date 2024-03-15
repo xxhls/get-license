@@ -17,11 +17,11 @@ const getConfig = async () => {
     email: 'xxx@email.com',
   };
 
-  // 检测是否存在 .gitconfig 文件
+  // Check .gitconfig
   const isExists = isGitconfigExists();
   if (isExists) {
     info('检测到 .gitconfig 文件');
-    // 读取配置文件
+    // Read Config
     const configPath = path.join(os.homedir(), '.gitconfig');
     const configStr = fs.readFileSync(configPath, 'utf-8');
     const configTemp = ini.parse(configStr);
@@ -32,7 +32,7 @@ const getConfig = async () => {
     info(`邮箱: ${config.email}`);
   } else {
     warn('未检测到 .gitconfig 文件');
-    // 创建配置文件
+    // Create Config
     const name = await question('请输入用户名: ');
     const email = await question('请输入邮箱: ');
 

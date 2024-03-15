@@ -13,10 +13,8 @@ import mpl2 from './Mozilla-Public-License-2.0';
 import un from './The-Unlicense';
 import { error, info, warn } from '../log';
 
-// 生成器类型
 type Generator = (name: string, email: string) => string;
 
-// License 生成器 Map
 const licenseGeneratorMap: Map<string, Generator> = new Map([
   ['mit', mit],
   ['apache2', apache2],
@@ -37,19 +35,19 @@ const licenses = Array.from(licenseGeneratorMap.keys());
 const getGenerator = (license: null | string) => {
   let generator: Generator | null = null;
   if (!license) {
-    warn('未选择 License 类型');
+    warn('Not Choose License');
     process.exit(1);
   } else if (licenseGeneratorMap.has(license)) {
-    info(`成功选择 ${license.toUpperCase()} License`);
+    info(`Successfully Choose ${license.toUpperCase()} License`);
     const temp = licenseGeneratorMap.get(license);
     if (temp) {
       generator = temp;
     } else {
-      error('查询 License 生成器失败');
+      error('Fail to Finding License Generator');
       process.exit(1);
     }
   } else {
-    warn('未知的 License 类型');
+    warn('Unknown License');
     process.exit(1);
   }
   return generator;
