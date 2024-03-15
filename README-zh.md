@@ -29,9 +29,16 @@ get-license --license=mit
 - `--license=bsd3`: BSD 3-Clause License
 - `--license=bsl1`: Boost Software License - Version 1.0
 - `--license=cc01`: Creative Commons Zero v1.0
+- `--license=epl2`: Eclipse Public License v2.0
+- `--license=agpl2`: GNU Affero General Public License v3.0
+- `--license=gpl2`: GNU General Public License v2.0
+- `--license=lgpl2`: GNU Lesser General Public License v2.1
+- `--license=mpl2`: Mozilla Public License 2.0
+- `--license=un`: The Unlicense
 
 ## 更新日志
 
+- v1.7.0 支持 Eclipse Public License v2.0 | GNU Affero General Public License v3.0 | GNU General Public License v2.0 | GNU Lesser General Public License v2.1 | Mozilla Public License 2.0 | The Unlicense
 - v1.6.0 支持 Creative Commons Zero v1.0
 - v1.5.0 支持 Boost Software License - Version 1.0
 - v1.4.0 支持 BSD 3-Clause License
