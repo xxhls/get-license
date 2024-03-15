@@ -14,6 +14,7 @@ export default defineConfig({
         items: [
           { text: 'Apache License 2.0', link: '/Apache-License-2.0.md' },
           { text: 'GNU General Public License v3.0', link: '/GNU-General-Public-License-v3.0.md' },
+          { text: 'MIT License', link: '/MIT-License.md' },
         ],
       },
     ],
