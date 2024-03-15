@@ -28,9 +28,11 @@ get-license --license=mit
 - `--license=bsd2`: BSD 2-Clause License
 - `--license=bsd3`: BSD 3-Clause License
 - `--license=bsl1`: Boost Software License - Version 1.0
+- `--license=cc01`: Creative Commons Zero v1.0
 
 ## Changelog
 
+- v1.6.0 support Creative Commons Zero v1.0
 - v1.5.0 support Boost Software License - Version 1.0
 - v1.4.0 support BSD 3-Clause License
 - v1.3.0 support BSD 2-Clause License
