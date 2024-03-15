@@ -30,6 +30,21 @@ const licenseGeneratorMap: Map<string, Generator> = new Map([
   ['mpl2', mpl2],
   ['un', un],
 ]);
+const licenseNameMap: Map<string, string> = new Map([
+  ['mit', 'MIT License'],
+  ['apache2', 'Apache License 2.0'],
+  ['gpl3', 'GNU General Public License v3.0'],
+  ['bsd2', 'BSD 2-Clause "Simplified" License'],
+  ['bsd3', 'BSD 3-Clause "New" or "Revised" License'],
+  ['bsl1', 'Boost Software License 1.0'],
+  ['cc01', 'Creative Commons Zero v1.0 Universal'],
+  ['epl2', 'Eclipse Public License 2.0'],
+  ['agpl3', 'GNU Affero General Public License v3.0'],
+  ['gpl2', 'GNU General Public License v2.0'],
+  ['lgpl2', 'GNU Lesser General Public License v2.1'],
+  ['mpl2', 'Mozilla Public License 2.0'],
+  ['un', 'The Unlicense'],
+]);
 const licenses = Array.from(licenseGeneratorMap.keys());
 
 const getGenerator = (license: null | string) => {
@@ -38,7 +53,7 @@ const getGenerator = (license: null | string) => {
     warn('Not Choose License');
     process.exit(1);
   } else if (licenseGeneratorMap.has(license)) {
-    info(`Successfully Choose ${license.toUpperCase()} License`);
+    info(`Successfully Choose ${licenseNameMap.get(license)} License`);
     const temp = licenseGeneratorMap.get(license);
     if (temp) {
       generator = temp;

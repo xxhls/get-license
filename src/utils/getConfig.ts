@@ -20,7 +20,7 @@ const getConfig = async () => {
   // Check .gitconfig
   const isExists = isGitconfigExists();
   if (isExists) {
-    info('检测到 .gitconfig 文件');
+    info('Check .gitconfig Successfully');
     // Read Config
     const configPath = path.join(os.homedir(), '.gitconfig');
     const configStr = fs.readFileSync(configPath, 'utf-8');
@@ -28,13 +28,13 @@ const getConfig = async () => {
     config.name = configTemp.user.name;
     config.email = configTemp.user.email;
 
-    info(`用户名: ${config.name}`);
-    info(`邮箱: ${config.email}`);
+    info(`Username: ${config.name}`);
+    info(`Email: ${config.email}`);
   } else {
-    warn('未检测到 .gitconfig 文件');
+    warn('Can not Check .gitconfig');
     // Create Config
-    const name = await question('请输入用户名: ');
-    const email = await question('请输入邮箱: ');
+    const name = await question('Please Enter the Username: ');
+    const email = await question('Please Enter the Email: ');
 
     config.name = name;
     config.email = email;

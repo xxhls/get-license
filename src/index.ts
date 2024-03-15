@@ -11,7 +11,7 @@ const main = async () => {
     .name(name)
     .description(description)
     .version(version)
-    .requiredOption(`--license <license>', '选择 License 类型, 可选值: ${licenses.join(' | ')}`)
+    .requiredOption(`--license <license>', 'Choose License, available: ${licenses.join(' | ')}`)
     .parse(process.argv);
 
   const options = program.opts();
