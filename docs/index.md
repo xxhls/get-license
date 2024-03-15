@@ -1,4 +1,4 @@
-# GET-LICENSE
+# GET-LICENSE <Badge type="tip" text="^1.7.5" />
 
 ## Introduction
 

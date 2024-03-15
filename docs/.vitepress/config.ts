@@ -2,9 +2,11 @@ import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'en-US',
   title: 'Get-License',
   description: 'official documentation for Get-License.',
   base: '/get-license/',
+  head: [['link', { rel: 'icon', href: '/get-license/favicon.svg' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
@@ -19,6 +21,16 @@ export default defineConfig({
       },
     ],
 
+    search: {
+      provider: 'local',
+    },
+
+    footer: {
+      message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/xxhls">xxhls</a>',
+    },
+
     socialLinks: [{ icon: 'github', link: 'https://github.com/xxhls/get-license' }],
   },
+  lastUpdated: true,
 });
