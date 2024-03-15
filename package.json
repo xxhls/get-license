@@ -1,6 +1,6 @@
 {
   "name": "@xxhls/get-license",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",

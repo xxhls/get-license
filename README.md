@@ -20,6 +20,7 @@ get-license --license=mit
 
 ## 更新日志
 
+- v1.2.0 支持 GNU General Public License v3.0
 - v1.1.0 支持 Apache License 2.0
 - v1.0.0 支持 MIT LICENSE
 
